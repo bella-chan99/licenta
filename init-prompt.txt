@@ -1,0 +1,41 @@
+Saalut!, voiam sa ma consult cu tine, aveam idea asta de facut la licenta.
+
+Voiam sa combin 
+
+1.modele numerice basic-ahh de prezicere a diverselor variabile folosite in calculul indicilor bursieri, gen indicele BET, care e calculat asa(vezi poza), deci pretul corespunzator actiunilor societatii, factorul de free float, etc etc  *cu* 
+
+2. Modele the natural language processing, care sa foloseasca stirile, sa prezica ce pondere (negative sau pozitive) sa atribuie prezicerilor numerice (ARIMA, whatever tf, da-mi tu optiuni) sa le corecteze mult mai bine.
+
+
+Spre exemplu, daca niste aciuni cad in cap, un model numeric ar prezice ca o sa continue sa cada in cap.
+
+Dar daca un model de NLP care se uita la stiri ii atribuie o pondere mult mai pozitiva, pentru ca, spre exemplu, s-au dat la  stiri ca firma respectiva tocmai a semnat un contract super misto cu alta firma buna, atunci ar trebui sa se prezica o incetinire a scaderii actiunilor, sau poate at a certain point, chiar o crestere. SII in acelasi timp poate si o crestere in actiunile celeilalte firme.
+
+
+In primul rand trebuie sa ma ajuti sa vezi daca mai facut cineva chestia asta si cum mai exact, ca sa pot sa zic ca eu l-am facut un pic diferit
+
+Dupa sa indentific literlmente variabilele pentru care o sa fac preziceriile astea.
+Dupa, unde gasesc datele?
+Dupa sa-mi zici ce model sa folosesc / sa antrenez pe datele astea.
+Dupa modele de NLP (care pot ori sa ruleze local, ori cu ceva oferta de student in cloud daca sunt cumva closed weights), care sa poata sa sa ia input string cu o stire, si dupa sa dea output la un sentimemnt pozitiv sau negativ pentru keywordurile firmelor respetcive.
+
+Practic ma gandesc sa reprezint state space-ul pietei intr-un anumit moment ca setul tuturor variabielor astora, pentru fiecare dintre cele 20 de firme care sunt folosite in calcululi indicelui monetar, si cumva modelul de NLP sa poata zica:
+
+given setnence:
+
+"Oracle a dat afara 500000 de oameni" => "Oracle" sentiment pozitiv++ => search for keyword Oracle => "ORCL value +++" or some you feel me?
+
+Inca o chestiep entru contributii personale, ar fi daca reusim sa gasim (daca nu exista deja) un sub-set de variabile din astea din state-space, care sa fie prezente in calculelor mai multlor indici ai mult mai multor tari importante din lume, pentru a putea generaliza modelul pentru pieturile din afara pls.
+
+
+Arhitectura overall ar fi sa primeasca ca input:
+
+time series cu primele 0,...,T valori ale tuturor variabilelor astea pentru cele N firme din indice
++
+array de stringuri cu stiri
+
+si sa dea la output:
+
+time series cu preziceri pentru variabilele alea pentru urmatoarele T+t (cu potentiala incertitudine / eroare pentru fiecare, sa nu fim tupeisti)
+
+Ceva de aici that im missing?
