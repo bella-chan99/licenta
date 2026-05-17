@@ -18,6 +18,7 @@ Explica:
 - modelul folosit efectiv in codul actual
 - de ce acel model este o regresie liniara doar cu intercept
 - cum apar `normal_returns`, `abnormal_returns`, `t-test` si `p-value`
+- fiecare etapa are si grafice, nu doar tabele si formule
 
 ### 2. `event_study_market_model_ro.ipynb`
 
@@ -30,6 +31,8 @@ Explica varianta mai academica si mai standard din literatura:
 - de ce ai nevoie si de randamentul pietei, nu doar de randamentul activului
 - cum se face predictia randamentului normal intr-un model mai realist
 - cum se obtin randamentele anormale in aceasta versiune
+- include si o sectiune cu date reale descarcate din Yahoo Finance
+- are si grafice pentru regresie, predictii si randamente anormale
 
 ## Varianta simpla: VS Code
 
@@ -62,3 +65,5 @@ uv run python -m ipykernel install --user --name event-study
 - randamente anormale
 - `t-test`, `p-value` si interpretarea lor
 - extensia catre market model-ul standard din finante
+- grafice in ambele notebook-uri
+- o sectiune live Yahoo Finance in al doilea notebook
