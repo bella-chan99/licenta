@@ -26,6 +26,9 @@ for asset_name, ticker_symbol in tickers_dict.items():
     # În viața reală s-ar putea să vrei să salvezi datele într-un CSV ca să nu faci call-uri pe net la fiecare rulare
     data = yf.download(ticker_symbol, start="2005-01-01", end="2024-01-01")["Close"]
 
+    # MAGIA AICI: Forțăm tabelul să devină o serie 1D (o singură coloană simplă)
+    data = data.squeeze()
+
     for event_date in important_dates:
         print(f"Analizăm evenimentul din: {event_date.date()}")
 
