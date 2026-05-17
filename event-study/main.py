@@ -1,6 +1,7 @@
 import yfinance as yf
 import pandas as pd
 from pandas.tseries.offsets import BDay
+from pathlib import Path
 from model import Model
 from t_test import t_test_if_significant
 from my_plots import Plot
@@ -30,12 +31,35 @@ event_window_post = 7
 plot_window_pre = 20
 plot_window_post = 15
 
+download_dir = Path(__file__).resolve().parent / "downloaded-data"
+download_dir.mkdir(exist_ok=True)
+
+
+def csv_cache_path(ticker_symbol):
+    safe_name = ticker_symbol.replace("^", "").replace("=", "_").replace("/", "_")
+    return download_dir / f"{safe_name}.csv"
+
+
+def load_or_download_close_prices(ticker_symbol):
+    csv_path = csv_cache_path(ticker_symbol)
+
+    if csv_path.exists():
+        print(f"  Citim din cache: {csv_path}")
+        cached_data = pd.read_csv(csv_path, index_col=0, parse_dates=True)["Close"]
+        return cached_data.squeeze()
+
+    print(f"  Descărcăm și salvăm în: {csv_path}")
+    downloaded_data = yf.download(
+        ticker_symbol, start="2005-01-01", end="2026-01-01"
+    )["Close"]
+    downloaded_data = downloaded_data.squeeze()
+    downloaded_data.to_frame(name="Close").to_csv(csv_path)
+    return downloaded_data
+
 for asset_name, ticker_symbol in tickers_dict.items():
     print(f"\n--- Procesare {asset_name} ({ticker_symbol}) ---")
 
-    # Descărcare implicită din Yahoo Finance
-    data = yf.download(ticker_symbol, start="2005-01-01", end="2026-01-01")["Close"]
-    data = data.squeeze()
+    data = load_or_download_close_prices(ticker_symbol)
 
     # --- BONUS ACADEMIC: CODUL PENTRU FIȘIERUL REAL DE LA BVB ---
     # Dacă descarci manual istoricul BET sub formă de CSV, numește-l 'BET.csv' și decomentează liniile de mai jos:
