@@ -1,4 +1,4 @@
-# Salut BUBU te bubesc
+# Salut BUBU te bubesc, NEATZAA
 
 Deci daca te intreaba vreodata profa de la licenta ce faci poti sa-i arati doar repo-ul asta 😎😎😎😎
 
