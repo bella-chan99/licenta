@@ -2,10 +2,10 @@
 
 Citeste materialele in ordinea asta:
 
-1. notebooks/index.md
-2. notebooks/event_study_explicat_ro.ipynb
-3. notebooks/event_study_market_model_ro.ipynb
-4. notebooks/README.md # doar dacă ai nevoie de ajutor la rulare, bubu
+1. README.md # cam asta iti zice cum sa rulezi tot in VS Code, bubulet
+2. event_study_explicat_ro.ipynb
+3. event_study_market_model_ro.ipynb
+4. index.md
 
 ## 1. Primul notebook
 
