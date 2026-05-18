@@ -1,5 +1,7 @@
 # Notebook-uri
 
+OMGG BEBE IM so proudo of you bravooo YOU'VE COME SO FARR
+
 Citeste notebook-urile in ordinea asta:
 
 1. `event_study_explicat_ro.ipynb`
@@ -44,11 +46,11 @@ Explica varianta mai academica si mai standard din literatura:
 uv sync
 ```
 
-4. Deschide mai intai `notebooks/event_study_explicat_ro.ipynb`.
-5. Alege kernel-ul din `.venv` al proiectului.
-6. Apasa `Run All`.
-7. Abia dupa aceea deschide `notebooks/event_study_market_model_ro.ipynb`.
-8. Ruleaza si acolo `Run All`.
+1. Deschide mai intai `notebooks/event_study_explicat_ro.ipynb`.
+2. Alege kernel-ul din `.venv` al proiectului.
+3. Apasa `Run All`.
+4. Abia dupa aceea deschide `notebooks/event_study_market_model_ro.ipynb`.
+5. Ruleaza si acolo `Run All`.
 
 Daca VS Code nu vede kernel-ul, ruleaza o singura data:
 
@@ -67,3 +69,5 @@ uv run python -m ipykernel install --user --name event-study
 - extensia catre market model-ul standard din finante
 - grafice in ambele notebook-uri
 - o sectiune live Yahoo Finance in al doilea notebook
+
+OMGG BEBE IM so proudo of you bravooo YOU'VE COME SO FARR

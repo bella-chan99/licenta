@@ -21,6 +21,8 @@ Ce inveti:
 - de ce media randamentelor istorice poate fi vazuta ca o regresie liniara doar cu intercept
 - ce sunt `normal_returns`, `abnormal_returns`, `t-statistic` si `p-value`
 
+OMGG BEBE IM so proudo of you bravooo YOU'VE COME SO FARR
+
 Vizual:
 
 - are grafice pentru preturi, randamente, ferestrele de estimare/eveniment, randamente anormale si CAR
@@ -56,3 +58,5 @@ uv sync
 ```
 
 Apoi deschizi notebook-urile in VS Code, alegi kernel-ul din `.venv` si rulezi `Run All`.
+
+OMGG BEBE IM so proudo of you bravooo YOU'VE COME SO FARR
